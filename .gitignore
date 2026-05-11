@@ -1,0 +1,8 @@
+config.local.bat
+*.local.bat
+.venv/
+__pycache__/
+*.pyc
+bin
+.vsjet
+.idea
