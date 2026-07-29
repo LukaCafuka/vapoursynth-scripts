@@ -19,11 +19,8 @@ if not SOURCE:
 
 clip = core.bs.VideoSource(SOURCE, showprogress=False)
 
-# Take a specific part of video
-clip_cut = clip[38612:81771]
-
 # Crop black borders
-clip_crop = core.std.CropRel(clip_cut, 10, 10, 0, 0)
+clip_crop = core.std.CropRel(clip, 10, 10, 0, 0)
 # add_border = clip_cut.std.AddBorders(top=2, left=2)
 
 # Deinterlacing

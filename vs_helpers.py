@@ -1,5 +1,5 @@
 from fractions import Fraction
-from vskernels import Spline36
+from vskernels import Spline36, Lanczos
 
 
 def round_to_mod(value: float, mod: int = 2) -> int:
@@ -37,7 +37,7 @@ def resize_jetpack_ar(clip, width=None, height=None, dar="4:3", mod=2, scaler=No
     """
 
     if scaler is None:
-        scaler = Spline36()
+        scaler = Lanczos()
 
     if (width is None and height is None) or (width is not None and height is not None):
         raise ValueError("Set exactly one of width or height.")
